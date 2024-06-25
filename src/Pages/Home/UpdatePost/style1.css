@@ -35,6 +35,10 @@
     text-align: center;
   }
   
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
   .heading {
     text-align: center;
     margin-bottom: 20px;
