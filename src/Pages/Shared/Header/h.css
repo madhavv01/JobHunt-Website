@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #2d3ab1;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .logo-container {
+    margin-right: auto;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-link, .header-button {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .header-button {
+    background-color: #2d3ab1;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .header-button:hover {
+    background-color: #43c2c2;
+  }
+  

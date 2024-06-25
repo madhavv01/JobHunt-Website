@@ -1,0 +1,20 @@
+.view-post-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+.view-post-header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
