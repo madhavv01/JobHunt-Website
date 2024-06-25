@@ -20,7 +20,7 @@ const Header = () => {
         <img src={logo} alt="JobHunt Logo" className="logo" />
       </Link>
       <div className="nav-links">
-        <Link to="/view-post" className="header-link">JobHunt</Link>
+        <Link to="/view-post" className="job-hunt">JobHunt</Link>
         {user ? (
           <div>
             <Link to="/create-post" className="header-link">

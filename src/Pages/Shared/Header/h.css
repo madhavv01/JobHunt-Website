@@ -19,6 +19,17 @@
     align-items: center;
     gap: 10px;
   }
+
+  .nav-links .job-hunt {
+    color: white;
+    text-decoration: none;
+    padding: 50 px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5 px;
+  }
   
   .header-link, .header-button {
     color: white;
@@ -28,8 +39,13 @@
     background: none;
     cursor: pointer;
     font-size: 16px;
+    align-items: center;
   }
-  
+
+  .header-link:hover {
+    background-color: #43c2c2;
+  }
+
   .header-button {
     background-color: #2d3ab1;
     border-radius: 4px;
