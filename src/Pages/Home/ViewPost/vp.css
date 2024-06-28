@@ -1,42 +1,67 @@
-.card-container {
-    width: 50%;
+.view-posts-container {
     padding: 20px;
-    margin: 10px auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.card-title {
     text-align: center;
 }
 
-.card-info {
-    text-align: center;
-    color: #666;
+.view-posts-title {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.card-detail {
-    margin-bottom: 20px;
-}
-
-.card-buttons {
+.posts-grid {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.post-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.post-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-details, .post-dates, .post-description, .post-requirements, .post-benefits, .post-apply {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.post-description:before, .post-requirements:before, .post-benefits:before, .post-apply:before {
+    font-weight: bold;
+    content: attr(data-label);
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
-.button {
-    padding: 10px 20px;
-    color: white;
+.edit-link button, .delete-button {
+    padding: 8px 16px;
     border: none;
-    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-.button-edit {
-    background-color: #4CAF50;
+.edit-link button {
+    background-color: #0cdb13;
+    color: white;
 }
 
-.button-delete {
-    background-color: #f44336;
+.delete-button {
+    background-color: #b41106;
+    color: white;
+}
+
+.edit-link button:hover, .delete-button:hover {
+    opacity: 0.8;
 }

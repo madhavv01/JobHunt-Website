@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./cp.css";
+import './cp.css';
 import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
@@ -11,15 +11,28 @@ const CreatePost = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const formData = new FormData(e.target);
     const newPost = Object.fromEntries(formData.entries());
+    newPost.currentDate = date;
+
     setCreatedPost(newPost);
     console.log(newPost);
 
-    // Simulated response handling:
-    alert("Post Created Successfully!");
-    navigate("/view-post", { replace: true });
+    fetch("https://job-portal-weld.vercel.app/createPost", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newPost),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          alert("Post Created Successfully!");
+        }
+        navigate("/view-post", { replace: true });
+      });
 
     e.target.reset();
   };
@@ -27,42 +40,40 @@ const CreatePost = () => {
   return (
     <div className="create-post-container">
       <h2>Create Job Post</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Post Name:</label>
-          <input type="text" name="postName" required placeholder="Enter your post" />
-        </div>
-        <div className="form-group">
-          <label>Company Name:</label>
-          <input type="text" name="companyName" required placeholder="Enter your company name" />
-        </div>
-        <div className="form-group">
-          <label>Number of Vacancy:</label>
-          <input type="text" name="numberOfVacancy" required placeholder="Enter number of vacancies" />
-        </div>
-        <div className="form-group">
-          <label>Current Date:</label>
-          <input type="date" name="currentDate" value={date} readOnly />
-        </div>
-        <div className="form-group">
-          <label>Last Apply Date:</label>
+      <form onSubmit={handleSubmit} className="create-post-form">
+        <label>
+          Post Name :
+          <input type="text" name="postName" required placeholder="Enter Post Name"/>
+        </label>
+        <label>
+          Company Name  :
+          <input type="text" name="companyName" required placeholder="Enter Company Name" />
+        </label>
+        <label>
+          Number of Vacancy :
+          <input type="text" name="numberOfVacancy" required placeholder="Enter Number of Vacancy"/>
+        </label>
+        <label>
+          Current Date  :
+          <input type="date" name="currentDate" required />
+        </label>
+        <label>
+          Last Apply Date :
           <input type="date" name="lastApplyDate" required />
-        </div>
-        <div className="form-group">
-          <label>Job Description:</label>
-          <textarea name="jobDescription" required rows="4" placeholder="Enter job description"></textarea>
-        </div>
-        <div className="form-group">
-          <label>Job Requirements:</label>
-          <textarea name="jobRequirements" required rows="4" placeholder="Enter job requirements"></textarea>
-        </div>
-        <div className="form-group">
-          <label>How to Apply:</label>
-          <textarea name="howToApply" required rows="4" placeholder="Enter how to apply"></textarea>
-        </div>
-        <div className="form-group">
-          <button type="submit">Create Post</button>
-        </div>
+        </label>
+        <label>
+          Job Description :
+          <textarea name="jobDescription" required rows="4" placeholder="Enter Job Description"></textarea>
+        </label>
+        <label>
+          Job Requirements :
+          <textarea name="jobRequirements" required rows="4" placeholder="Enter Job Requirements"></textarea>
+        </label>
+        <label>
+          How to Apply  :
+          <textarea name="howToApply" required rows="4" placeholder="Enter How to Apply"></textarea>
+        </label>
+        <button type="submit">Create Post</button>
       </form>
     </div>
   );
