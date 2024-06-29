@@ -1,8 +1,4 @@
-h2{
-  text-align: center;
-}
-
-.create-post-container {
+.update-post-container {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -10,23 +6,22 @@ h2{
     background-color: #f4f4f4;
   }
   
-  .create-post-form label {
+  .update-post-form label {
     display: block;
     margin-bottom: 10px;
   }
   
-  .create-post-form input[type="text"],
-  .create-post-form input[type="date"],
-  .create-post-form textarea {
+  .update-post-form input[type="text"],
+  .update-post-form input[type="date"],
+  .update-post-form textarea {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-bottom: 10px;
   }
   
-  .create-post-form button {
+  .update-post-form button {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
@@ -34,11 +29,10 @@ h2{
     border-radius: 4px;
     cursor: pointer;
     display: block;
-    margin-top: 20px;
-    margin-left: 35%;
+    width: 100%;
   }
   
-  .create-post-form button:hover {
+  .update-post-form button:hover {
     background-color: #0056b3;
   }
   

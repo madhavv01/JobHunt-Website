@@ -23,7 +23,7 @@ const Login = () => {
         console.log(result);
         const user = result.user;
         if (user) {
-          alert('User Logged In Successfully');
+          alert('Successfully logged in');
         }
 
         const currentUser = { email: user.email };
@@ -48,20 +48,20 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h1>Sign in</h1>
+      <h2>Sign in</h2>
       <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
-          <label>Email Address:</label>
+          <label>Email Address  :</label>
           <input type="email" name="email" required placeholder="Enter your email" />
         </div>
         <div className="form-group">
-          <label>Password:</label>
+          <label>Password :</label>
           <input type="password" name="password" required placeholder="Enter your password" />
         </div>
         <button type="submit" className="login-button">Sign In</button>
         <div className="signup-link">
           <Link to="/signup">
-            <p>Don't have an account? Register</p>
+            <p>Don't have an account? <br></br>Sign Up</p>
           </Link>
         </div>
       </form>

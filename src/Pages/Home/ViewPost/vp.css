@@ -1,20 +1,67 @@
-.view-post-container {
-    max-width: 960px;
-    margin: 0 auto;
+.view-posts-container {
     padding: 20px;
-    border-radius: 8px;
-    background-color: #f0f0f0;
+    text-align: center;
 }
 
-.view-post-header {
-    text-align: center;
-    color: #333;
+.view-posts-title {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.posts-container {
+.posts-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
+}
+
+.post-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.post-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-details, .post-dates, .post-description, .post-requirements, .post-benefits, .post-apply {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.post-description:before, .post-requirements:before, .post-benefits:before, .post-apply:before {
+    font-weight: bold;
+    content: attr(data-label);
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.edit-link button, .delete-button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-link button {
+    background-color: #0cdb13;
+    color: white;
+}
+
+.delete-button {
+    background-color: #b41106;
+    color: white;
+}
+
+.edit-link button:hover, .delete-button:hover {
+    opacity: 0.8;
 }

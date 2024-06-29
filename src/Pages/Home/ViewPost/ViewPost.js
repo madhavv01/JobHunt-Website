@@ -1,17 +1,16 @@
 import React, { useContext, useState, useEffect } from 'react';
 import './vp.css';
-import { AuthContext } from '../../../AuthProvider';
 import ViewPostCard from './ViewPostCard';
+import { AuthContext } from '../../../AuthProvider';
 
 const ViewPost = () => {
     const [posts, setPosts] = useState([]);
     const { user, logOutUser } = useContext(AuthContext);
 
     useEffect(() => {
-        const token = localStorage.getItem('job-token');
         fetch('https://job-portal-weld.vercel.app/posts', {
             headers: {
-                authorization: `Bearer ${token}`
+                authorization: `Bearer ${localStorage.getItem('job-token')}`
             }
         })
         .then(res => {
@@ -22,18 +21,16 @@ const ViewPost = () => {
             return res.json();
         })
         .then(data => setPosts(data))
-        .catch(err => console.error('Error fetching posts:', err));
+        .catch(err => console.error("Failed to load posts:", err));
     }, [user?.email, logOutUser]);
 
     return (
-        <div className="view-post-container">
-            <h1 className="view-post-header">View Posts</h1>
-            <div className="posts-container">
-                {posts.length > 0 ? (
-                    posts.map(post => <ViewPostCard post={post} key={post._id} />)
-                ) : (
-                    <p>No posts available.</p>
-                )}
+        <div className="view-posts-container">
+            <h2 className="view-posts-title">View Posts</h2>
+            <div className="posts-grid">
+                {posts.length > 0 ? posts.map(post => (
+                    <ViewPostCard post={post} key={post._id} />
+                )) : <p>No posts available.</p>}
             </div>
         </div>
     );
