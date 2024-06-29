@@ -43,11 +43,11 @@ const CreatePost = () => {
       <form onSubmit={handleSubmit} className="create-post-form">
         <label>
           Post Name :
-          <input type="text" name="postName" required placeholder="Enter Post Name"/>
+          <input type="text" name="postName" required placeholder="Enter Post"/>
         </label>
         <label>
           Company Name  :
-          <input type="text" name="companyName" required placeholder="Enter Company Name" />
+          <input type="text" name="companyName" required placeholder="Enter Company" />
         </label>
         <label>
           Number of Vacancy :

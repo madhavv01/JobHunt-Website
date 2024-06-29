@@ -1,14 +1,14 @@
 .home-container {
-    text-align: center; 
+  text-align: center;
 }
 
 .home-image-container {
-    margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .home-image-container img {
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
-    margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 10px;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ViewPost from './../ViewPost/ViewPost';
-import homeImg from "../../../images/home.svg";
+import homeImg from "../../../images/home.jpg";
 import './h.css';
 
 const Home = () => {
