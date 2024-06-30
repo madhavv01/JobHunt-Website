@@ -12,6 +12,7 @@
 .footer-logo {
     display: flex;
     align-items: center;
+    margin-left: 45%;
 }
 
 .footer-logo img {
@@ -38,7 +39,7 @@
     text-decoration: none;
     font-size: 10px;
     cursor: pointer;
-    margin-left: 60%;
+    margin-left: 33%;
 }
 
 .footer-privacy {
