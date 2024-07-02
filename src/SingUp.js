@@ -27,7 +27,7 @@ const SignUp = () => {
         alert(error.message);
       });
   };
-
+  
   return (
     <div className="signup-container">
       <h1>Create Account</h1>
@@ -85,14 +85,14 @@ const SignUp = () => {
               checked={isAdmin}
               onChange={() => setIsAdmin(!isAdmin)}
             />
-            Is Admin
+            Admin
           </label>
         </div>
         <button type="submit" className="submit-button">
           Create Account
         </button>
         <div className="login-link">
-          <Link to="/login">Already have an account? Sign In</Link>
+          <Link to="/login">Already have an account? <br></br>Sign In</Link>
         </div>
       </form>
     </div>

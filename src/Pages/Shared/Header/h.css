@@ -19,7 +19,7 @@
   color: white;
   text-decoration: none;
   font-size: 20px;
-  margin-right: 70%;
+  margin-right: 65%;
 }
 
 .nav-links {
@@ -53,4 +53,38 @@
 
 .header-button:hover {
   background-color: #06046d;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .job-hunt {
+    font-size: 16px;
+    margin-right: 70%;
+  } 
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  .header-link, .header-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .header-button {
+    border-radius: 3px;
+  }
+
+  .header-link:hover {
+    background-color: #1e058f;
+  }
+
+  
 }
