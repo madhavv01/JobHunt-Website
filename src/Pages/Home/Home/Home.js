@@ -1,16 +1,12 @@
 import React from 'react';
-import ViewPost from './../ViewPost/ViewPost';
-import homeImg from "../../../images/home.jpg";
-import useStyles from "../../../Styles/Styles";
+import ViewPost from '../ViewPost/ViewPost';
+import homeImg from '../../../images/home.jpg';
+import './home.css';
 
 const Home = () => {
-    const classes = useStyles();
-    
     return (
-        <div>
-            <div className={classes.homeDiv}>
-                <img className={classes.homeImg} src={homeImg} alt="" />
-            </div>
+        <div className="homeDiv">
+            <img className="homeImg" src={homeImg} alt="Home" />
             <ViewPost />
         </div>
     );
