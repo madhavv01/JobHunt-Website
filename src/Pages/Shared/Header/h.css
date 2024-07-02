@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #2d3ab1;
+  color: white;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.logo-container {
+  margin-right: auto;
+}
+
+.logo {
+  height: 40px;
+}
+
+.job-hunt {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 70%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-link, .header-button {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  align-items: center;
+}
+
+
+.header-link:hover {
+  background-color: #19037c;
+}
+
+.header-button {
+  background-color: #2d3ab1;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.header-button:hover {
+  background-color: #06046d;
+}

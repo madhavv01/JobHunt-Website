@@ -1,0 +1,67 @@
+h3{
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.post-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+   
+  .post-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .post-details {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .post-dates {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .post-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .post-requirements {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .post-apply {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+.post-card .apply-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #06cc17;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.post-card .delete-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #be0f09;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
