@@ -8,24 +8,37 @@
 }
 
 .logo-container {
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
 }
 
 .logo {
   height: 40px;
+  margin-right: 10px; 
 }
 
 .job-hunt {
-  color: white;
   text-decoration: none;
+  color: white;
   font-size: 20px;
-  margin-right: 65%;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 10px;
+}
+
+.nav-links-user {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
 }
 
 .header-link, .header-button {
@@ -39,7 +52,6 @@
   font-size: 16px;
   align-items: center;
 }
-
 
 .header-link:hover {
   background-color: #1e058f;
@@ -66,10 +78,14 @@
 
   .job-hunt {
     font-size: 16px;
-    margin-right: 70%;
-  } 
+    margin-right: 10px;
+  }
 
   .nav-links {
+    gap: 5px;
+  }
+
+  .nav-links-user {
     gap: 5px;
   }
 
@@ -85,6 +101,4 @@
   .header-link:hover {
     background-color: #1e058f;
   }
-
-  
 }

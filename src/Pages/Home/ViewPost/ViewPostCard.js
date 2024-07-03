@@ -182,7 +182,7 @@ const ViewPostCard = ({ post }) => {
         </div>
       ) : (
         <div>
-          <label>Upload Resume:</label>
+          <label>Upload Resume (optional):</label>
           <input
             type="file"
             onChange={(e) => setResumeFile(e.target.files[0])}

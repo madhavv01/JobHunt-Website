@@ -15,23 +15,23 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Link to="/" className="logo-container">
-        <img src={logo} alt="JobHunt Logo" className="logo" />
-      </Link>
-      <Link to="/view-post" className="job-hunt">JobHunt</Link>
+      <div className="logo-container">
+        <Link to="/" className="logo-link">
+          <img src={logo} alt="JobHunt Logo" className="logo" />
+        </Link>
+        <Link to="/" className="job-hunt">JobHunt</Link>
+      </div>
       <div className="nav-links">
-        
         {user ? (
-          <div>
+          <div className="nav-links-user">
             {user.admin && (
               <Link to="/create-post" className="header-link">Create Post</Link>
             )}
             <Link to="/view-post" className="header-link">View Posts</Link>
             <button onClick={handleLogout} className="header-button">Sign Out</button>
           </div>
-          
         ) : (
-          <Link to="/login" className="header-link">Sign In</Link>
+          <Link to="/login" className="header-button">Sign In</Link>
         )}
       </div>
     </div>

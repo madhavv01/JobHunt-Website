@@ -19,7 +19,11 @@ const SignUp = () => {
         console.log(result);
         if (result.user) {
           alert("User Created Successfully");
-          navigate("/", { replace: true });
+          if (isAdmin) {
+            navigate("/login", { replace: true });
+          } else {
+            navigate("/view-post", { replace: true });
+          }
         }
       })
       .catch((error) => {
@@ -33,13 +37,14 @@ const SignUp = () => {
       <h1>Create Account</h1>
       <form onSubmit={handleSubmit} className="signup-form">
         <div className="form-group">
-          <label>Name:</label>
+          <label>Full Name:</label>
           <input
             type="text"
             name="name"
             required
             placeholder="Enter your name"
           />
+          
         </div>
         <div className="form-group">
           <label>Phone Number:</label>

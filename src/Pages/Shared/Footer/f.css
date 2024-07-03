@@ -12,7 +12,6 @@
 .footer-logo {
     display: flex;
     align-items: center;
-    margin-left: 45%;
 }
 
 .footer-logo img {
@@ -20,32 +19,41 @@
 }
 
 .footer-text {
-    margin-left: 20px;
+    margin-left: 10px;
     color: #fff;
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
 }
 
+.footer-links {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
 .footer-rights {
     flex-basis: 100%;
-    margin-right: 10px;
+    margin-top: 10px;
     color: #fff;    
-    font-size: 10px;
+    font-size: 12px;
 }
 
-.footer-about {
-    color: #fff;
-    text-decoration: none;
-    font-size: 10px;
-    cursor: pointer;
-    margin-left: 30%;
-}
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.footer-privacy {
-    color: #fff;
-    text-decoration: none;
-    font-size: 10px;
-    cursor: pointer;
-    
+    .footer-links {
+        margin-top: 10px;
+    }
 }
