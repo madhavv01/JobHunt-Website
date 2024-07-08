@@ -64,6 +64,15 @@ const SignUp = () => {
             placeholder="Enter your address"
           />
         </div>
+        <div classname="form-group">
+          <label>Current Company:</label>
+          <input
+            type="text"
+            name="company"
+            required
+            placeholder="Enter your current company"
+          />
+        </div><br/>
         <div className="form-group">
           <label>Email Address:</label>
           <input
